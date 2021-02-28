@@ -37,6 +37,8 @@ Auf das Zeichen mit den 4 Vierecken auf der linken Seite oder ctrl + , --> Exten
 VirtualBox, Cmder und Vagranat herungerladen
 
 #### Vagrant File erstellen
+Voranmerkung: https://app.vagrantup.com/boxes/search hier findet man die VM Vorlagen, welche man benutzen kann.
+
 cd Ort, an dem die VM abgelegt werden sollte und einen neuen Ordner erstellen:
 
 vagrant init ubuntu/xenial64 |War das Beispiel in der Aufgabe
