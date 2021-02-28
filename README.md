@@ -65,5 +65,33 @@ vagrant box add "box-name" oder vagrant box add "box-url"
 
 Mit folgendem Befehl kann man Sie wieder entfernen
 
-vagrant boc remove "box-name" --> Der Box name wird folgendermassen aufgebaut: Entwickler/Box (z.B. ubuntu/xenial64)
+vagrant box remove "box-name" --> Der Box name wird folgendermassen aufgebaut: Entwickler/Box (z.B. ubuntu/xenial64)
 
+##### Box Befehle
+Box hinzufügen:
+
+vagrant add "box-name"
+
+Lokal vorhandene Boxen anzeigen:
+
+vagrant  box list
+
+Vm erstellen
+
+Neuer Ablage Ordner erstellen: mkdir xy in beliebten Verzeichnis
+
+cd neuer Ordner
+
+vagrant init "box-name"
+
+vagrant up
+
+Status anzeigen: vagrant status
+
+Vm Updaten:
+
+Nach einer Änderung im Vagrantfile kann ein Server wie folgt aktualisiert werden: vagrant provision
+
+VM löschen:
+
+Vagrant destroy -f
