@@ -58,3 +58,12 @@ vagrant ssh
 
 Markdownlight Extension heruntegeladen und, wie man an diesem Beispiel hier sieht eingerichtet.
 
+#### Boxen
+Boxen sind VM Vorlagen. Man kann diese direkt im cmder mit folgendem Befehl herunterladen:
+
+vagrant box add "box-name" oder vagrant box add "box-url"
+
+Mit folgendem Befehl kann man Sie wieder entfernen
+
+vagrant boc remove "box-name" --> Der Box name wird folgendermassen aufgebaut: Entwickler/Box (z.B. ubuntu/xenial64)
+
