@@ -19,11 +19,37 @@ Cd in das geklone Repository und Status abfragen:
 git pull
 git status
 
-### VSC
+##### Lokale Änderungen in Repository pushen
+Cd in Repository
+git add - A "<Filename>"
+git commit -m Kommentar (falls gewünscht)
+git push
 
+### VSC
+#### Extensions
+Auf das Zeichen mit den 4 Vierecken auf der linken Seite oder <ctrl + ,> --> Extension suchen und installieren
+
+#### Lokale Änderungen in Repository pushen
+Änderung mit <ctrl + s> speichern --> auf der linken Seite wird bei einem Icon eine 1 erscheinen --> Text Message eingeben --> auf Hacken drücken --> drei Punkte --> Push
 
 ### Vagrant
-s
+#### Vorbereitung
+VirtualBox, Cmder und Vagranat herungerladen
+
+#### Vagrant File erstellen
+cd Ort, an dem die VM abgelegt werden sollte und einen neuen Ordner erstellen:
+
+vagrant init ubuntu/xenial64 |War das Beispiel in der Aufgabe
+
+#### vagrant installieren und starten
+vagrant up --provider virtualbox
+
+Info: Dannach ist die VM in VirtualBox eingerichtet. Mit VmWare hat es nicht geklappt, da es noch eine extra Lizenz für VMWare gebraucht hätte
+
+#### SSH Zugriff
+Cd in das Verzeichnis der VM:
+
+vagrant ssh
 
 ## 20 Infrastruktur-Autorsiierung 
 abb
