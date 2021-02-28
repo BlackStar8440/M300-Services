@@ -5,14 +5,14 @@ M300 Serverübergreifende Dienste
 ### GitHub Bash
 Konfigurieren:
 
-git config --global user.name "<username>"
-git confug --global user.email "<E-Mail>"
+git config --global user.name "username"
+git confug --global user.email "E-Mail"
 
 #### Befehle
 ##### Repository klonen
 Cd in gewünschtes Repository, in das es kopiert werden sollte:
 
-git clone "<URL vom Repository>"
+git clone "URL vom Repository"
 
 Cd in das geklone Repository und Status abfragen:
 
@@ -21,16 +21,16 @@ git status
 
 ##### Lokale Änderungen in Repository pushen
 Cd in Repository
-git add - A "<Filename>"
+git add - A "Filename"
 git commit -m Kommentar (falls gewünscht)
 git push
 
 ### VSC
 #### Extensions
-Auf das Zeichen mit den 4 Vierecken auf der linken Seite oder <ctrl + ,> --> Extension suchen und installieren
+Auf das Zeichen mit den 4 Vierecken auf der linken Seite oder ctrl + , --> Extension suchen und installieren
 
 #### Lokale Änderungen in Repository pushen
-Änderung mit <ctrl + s> speichern --> auf der linken Seite wird bei einem Icon eine 1 erscheinen --> Text Message eingeben --> auf Hacken drücken --> drei Punkte --> Push
+Änderung mit ctrl + s speichern --> auf der linken Seite wird bei einem Icon eine 1 erscheinen --> Text Message eingeben --> auf Hacken drücken --> drei Punkte --> Push
 
 ### Vagrant
 #### Vorbereitung
