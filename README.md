@@ -58,7 +58,7 @@ vagrant ssh
 
 Markdownlight Extension heruntegeladen und, wie man an diesem Beispiel hier sieht eingerichtet.
 
-#### Boxen
+### Vagrant | Boxen
 Boxen sind VM Vorlagen. Man kann diese direkt im cmder mit folgendem Befehl herunterladen:
 
 vagrant box add "box-name" oder vagrant box add "box-url"
@@ -95,3 +95,6 @@ Nach einer Änderung im Vagrantfile kann ein Server wie folgt aktualisiert werde
 VM löschen:
 
 Vagrant destroy -f
+
+### Packer
+Packer: Tool, mit dem man Images bzw. Boxen für eine Vielzahl von Dynamic Infrastructure Platforms mit einer Konfdatei erstellen kann
