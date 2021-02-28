@@ -98,3 +98,11 @@ Vagrant destroy -f
 
 ### Packer
 Packer: Tool, mit dem man Images bzw. Boxen für eine Vielzahl von Dynamic Infrastructure Platforms mit einer Konfdatei erstellen kann
+
+#### Funktionsweise
+
+Provisioning: Anweisung auf ein anderes Programm --> Eine Shell, wie z.B. Bash
+Builder: Erstellt Image, für eine bestimmte dynamische Infrastruktur Plattform --> z.B. VirtualBoc
+Post-processors: Bestandteile von Packer, welche das ERgebnis eines Bilders übernehmen
+
+#### Installation 
