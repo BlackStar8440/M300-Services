@@ -51,5 +51,8 @@ Cd in das Verzeichnis der VM:
 
 vagrant ssh
 
-## 20 Infrastruktur-Autorsiierung 
-abb
+## 20 Infrastruktur-Autorsierung 
+### Markdown
+
+Markdownlight Extension heruntegeladen und, wie man an diesem Beispiel hier sieht eingerichtet.
+
