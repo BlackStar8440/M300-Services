@@ -106,3 +106,6 @@ Builder: Erstellt Image, für eine bestimmte dynamische Infrastruktur Plattform 
 Post-processors: Bestandteile von Packer, welche das ERgebnis eines Bilders übernehmen
 
 #### Installation 
+Herunterladen und entpacken. Normalerweise müsste man den "Variabel-Pfad" ergänzen, jedoch hat es im cmd automatisch gepackt und mit "packer --version" kommt die Versions Angabe
+
+#### Image erstellen
