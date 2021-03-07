@@ -64,7 +64,7 @@ Content cell 1 | Content cell 2
 Content column 1 | Content column 2
 
 #### Markdown Bild einfügen
-\![alt text](url)
+\!\[alt text]\(url)
 
 ### Vagrant | Boxen
 Boxen sind VM Vorlagen. Man kann diese direkt im cmder mit folgendem Befehl herunterladen:
