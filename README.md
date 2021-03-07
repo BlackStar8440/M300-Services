@@ -135,4 +135,4 @@ Ganzes Script:\
 `end`\
 
 #### Netzwerkplan
-![Getting Started](./20_Netzwerkplan.png)
+![Getting Started](20_Netzwerkplan.png)
