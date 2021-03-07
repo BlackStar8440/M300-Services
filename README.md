@@ -108,4 +108,24 @@ Post-processors: Bestandteile von Packer, welche das ERgebnis eines Bilders übe
 #### Installation 
 Herunterladen und entpacken. Normalerweise müsste man den "Variabel-Pfad" ergänzen, jedoch hat es im cmd automatisch gepackt und mit "packer --version" kommt die Versions Angabe
 
-#### Image erstellen
+### Vagrant Umgebung
+
+#### Umgebung 
+VM mit einem Vagrant Fiel aufgsetzt:
+
+`Vagrant.configure(2) do |config|
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.network "forwarded_port", guest:80, host:3000, auto_correct: true
+  config.vm.synced_folder ".", "/var/www/html"  
+config.vm.provider "virtualbox" do |vb|
+  vb.memory = "512"  
+end
+config.vm.provision "shell", inline: <<-SHELL
+  # Packages vom lokalen Server holen
+  # sudo sed -i -e"1i deb {{config.server}}/apt-mirror/mirror/archive.ubuntu.com/ubuntu xenial main restricted" /etc/apt/sources.list 
+  sudo apt-get update
+  sudo apt-get -y install apache2 
+SHELL
+end`
+
+#### Netzwerkplan
