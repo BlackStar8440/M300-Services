@@ -50,7 +50,6 @@ Info: Dannach ist die VM in VirtualBox eingerichtet. Mit VmWare hat es nicht gek
 
 #### SSH Zugriff
 Cd in das Verzeichnis der VM:
-
 `vagrant ssh`
 
 ## 20 Infrastruktur-Autorsierung 
@@ -140,3 +139,11 @@ First Header | Second Header
 ------------ | -------------
 Content cell 1 | Content cell 2
 Content column 1 | Content column 2
+
+#### Funktionsweise/Testfälle
+
+Zugriff via den Port 3000:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/images/WebserverPort.PNG)
+
+Wenn man das index.html File gelöscht wird sieht man das auf dem Host auch:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/images/Webserver_ohneIndex.PNG)
