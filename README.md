@@ -132,7 +132,7 @@ Ganzes Script:\
   `sudo apt-get update`\
   `sudo apt-get -y install apache2`\
 `SHELL`\
-`end`\
+`end`
 
 #### Netzwerkplan
-![Getting Started](20_Netzwerkplan.png)
+![GitHub Logo](M300-Services/blob/main/20_Netzwerkplan.png)
