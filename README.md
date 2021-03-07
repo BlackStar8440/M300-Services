@@ -111,23 +111,28 @@ Herunterladen und entpacken. Normalerweise müsste man den "Variabel-Pfad" ergä
 ### Vagrant Umgebung
 
 #### Umgebung 
-VM mit einem Vagrant Fiel aufgsetzt:
+VM mit einem Vagrant Fiele ein Ubuntu Webserver aufsetzen. Folgenden Zeilen aus dem Script sind wichtig für den Webserver
 
-`Vagrant.configure(2) do |config|
-  config.vm.box = "ubuntu/xenial64"
-  config.vm.network "forwarded_port", guest:80, host:3000, auto_correct: true
-  config.vm.synced_folder ".", "/var/www/html"  
-config.vm.provider "virtualbox" do |vb|
-  vb.memory = "512"  
-end
-config.vm.provision "shell", inline: <<-SHELL
-  # Packages vom lokalen Server holen
-  # sudo sed -i -e"1i deb {{config.server}}/apt-mirror/mirror/archive.ubuntu.com/ubuntu xenial main restricted" /etc/apt/sources.list 
-  sudo apt-get update
-  sudo apt-get -y install apache2 
-SHELL
-end`
+Portforwarding für den Host lauft über den Port 3000:
+`config.vm.network "forwarded_port", guest:80, host:3000, auto_correct: true`
 
-`abcdefghijklmnopqrstuvwxyz`
+Ubuntu VM updaten und Webserver installieren:
+`sudo apt-get update`
+`sudo apt-get -y install apache2 `
+
+Ganzes Script:
+`Vagrant.configure(2) do |config|`
+  `config.vm.box = "ubuntu/xenial64"`
+  `config.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true`
+ `config.vm.synced_folder ".", "/var/www/html"  `
+`config.vm.provider "virtualbox" do |vb|`
+ `vb.memory = "512"`
+`end`
+`config.vm.provision "shell", inline: <<-SHELL`
+  `sudo apt-get update`
+  `sudo apt-get -y install apache2`
+`SHELL`
+`end`
 
 #### Netzwerkplan
+Bild einfügen
