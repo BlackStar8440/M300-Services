@@ -57,6 +57,15 @@ Cd in das Verzeichnis der VM:
 
 Markdownlight Extension heruntegeladen und, wie man an diesem Beispiel hier sieht eingerichtet.
 
+#### Markdwon Tabellen machen
+First Header | Second Header
+------------ | -------------
+Content cell 1 | Content cell 2
+Content column 1 | Content column 2
+
+#### Markdown Bild einfügen
+\![alt text](url)
+
 ### Vagrant | Boxen
 Boxen sind VM Vorlagen. Man kann diese direkt im cmder mit folgendem Befehl herunterladen:
 
@@ -134,11 +143,6 @@ Ganzes Script:\
 
 #### Netzwerkplan
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/images/20_Netzwerkplan.PNG)
-
-First Header | Second Header
------------- | -------------
-Content cell 1 | Content cell 2
-Content column 1 | Content column 2
 
 #### Funktionsweise/Testfälle
 
