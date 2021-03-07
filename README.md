@@ -34,24 +34,24 @@ Auf das Zeichen mit den 4 Vierecken auf der linken Seite oder ctrl + , --> Exten
 
 ### Vagrant
 #### Vorbereitung
-VirtualBox, Cmder und Vagranat herungerladen
+VirtualBox, Cmder und Vagranat herunterladen
 
 #### Vagrant File erstellen
 Voranmerkung: https://app.vagrantup.com/boxes/search hier findet man die VM Vorlagen, welche man benutzen kann.
 
 cd Ort, an dem die VM abgelegt werden sollte und einen neuen Ordner erstellen:
 
-vagrant init ubuntu/xenial64 |War das Beispiel in der Aufgabe
+`vagrant init ubuntu/xenial64` --> War das Beispiel in der Aufgabe
 
 #### vagrant installieren und starten
-vagrant up --provider virtualbox
+`vagrant up --provider virtualbox`
 
 Info: Dannach ist die VM in VirtualBox eingerichtet. Mit VmWare hat es nicht geklappt, da es noch eine extra Lizenz für VMWare gebraucht hätte
 
 #### SSH Zugriff
 Cd in das Verzeichnis der VM:
 
-vagrant ssh
+`vagrant ssh`
 
 ## 20 Infrastruktur-Autorsierung 
 ### Markdown
