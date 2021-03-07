@@ -5,8 +5,8 @@ M300 Serverübergreifende Dienste
 ### GitHub Bash
 Konfigurieren:
 
-git config --global user.name "username"
-git confug --global user.email "E-Mail"
+`git config --global user.name "username"`\
+`git confug --global user.email "E-Mail"`
 
 #### Befehle
 ##### Repository klonen
