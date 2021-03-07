@@ -65,13 +65,14 @@ Boxen sind VM Vorlagen. Man kann diese direkt im cmder mit folgendem Befehl heru
 
 Mit folgendem Befehl kann man Sie wieder entfernen
 
-`vagrant box remove "box-name"`\ --> Der Box name wird folgendermassen aufgebaut: Entwickler/Box (z.B. ubuntu/xenial64)
+`vagrant box remove "box-name"`\
+--> Der Box name wird folgendermassen aufgebaut: Entwickler/Box (z.B. ubuntu/xenial64)
 
 ##### Box Befehle
-Box hinzufügen:
+Box hinzufügen:\
 `vagrant add "box-name"`
 
-Lokal vorhandene Boxen anzeigen:
+Lokal vorhandene Boxen anzeigen:\
 `vagrant  box list`
 
 Vm erstellen
