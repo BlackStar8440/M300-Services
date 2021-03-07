@@ -113,10 +113,10 @@ Herunterladen und entpacken. Normalerweise müsste man den "Variabel-Pfad" ergä
 #### Umgebung 
 VM mit einem Vagrant Fiele ein Ubuntu Webserver aufsetzen. Folgenden Zeilen aus dem Script sind wichtig für den Webserver
 
-Portforwarding für den Host lauft über den Port 3000:
+Portforwarding für den Host lauft über den Port 3000:\
 `config.vm.network "forwarded_port", guest:80, host:3000, auto_correct: true`
 
-Ubuntu VM updaten und Webserver installieren:
+Ubuntu VM updaten und Webserver installieren:\
 `sudo apt-get update`
 `sudo apt-get -y install apache2 `
 
@@ -135,4 +135,4 @@ Ganzes Script:\
 `end`\
 
 #### Netzwerkplan
-Bild einfügen
+![Getting Started](./20_Netzwerkplan.png)
