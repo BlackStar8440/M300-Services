@@ -20,10 +20,10 @@ Cd in das geklone Repository und Status abfragen:
 `git status`
 
 ##### Lokale Änderungen in Repository pushen
-Cd in Repository
-git add - A "Filename"
-git commit -m Kommentar (falls gewünscht)
-git push
+Cd in Repository\
+`git add - A "Filename"`\
+`git commit -m Kommentar (falls gewünscht)`\
+`git push`\
 
 ### VSC
 #### Extensions
