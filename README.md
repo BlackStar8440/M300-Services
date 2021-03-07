@@ -135,4 +135,4 @@ Ganzes Script:\
 `end`
 
 #### Netzwerkplan
-![GitHub Logo](M300-Services/blob/main/20_Netzwerkplan.png)
+![GitHub Logo](M300-Services/20_Netzwerkplan.PNG)
