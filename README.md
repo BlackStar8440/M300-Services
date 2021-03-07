@@ -12,12 +12,12 @@ Konfigurieren:
 ##### Repository klonen
 Cd in gewünschtes Repository, in das es kopiert werden sollte:
 
-git clone "URL vom Repository"
+`git clone "URL vom Repository"`
 
 Cd in das geklone Repository und Status abfragen:
 
-git pull
-git status
+`git pull`\
+`git status`
 
 ##### Lokale Änderungen in Repository pushen
 Cd in Repository
