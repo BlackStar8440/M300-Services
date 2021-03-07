@@ -61,20 +61,18 @@ Markdownlight Extension heruntegeladen und, wie man an diesem Beispiel hier sieh
 ### Vagrant | Boxen
 Boxen sind VM Vorlagen. Man kann diese direkt im cmder mit folgendem Befehl herunterladen:
 
-`vagrant box add "box-name"` oder \ `vagrant box add "box-url"`
+`vagrant box add "box-name"` oder  `vagrant box add "box-url"`
 
 Mit folgendem Befehl kann man Sie wieder entfernen
 
-vagrant box remove "box-name" --> Der Box name wird folgendermassen aufgebaut: Entwickler/Box (z.B. ubuntu/xenial64)
+`vagrant box remove "box-name"`\ --> Der Box name wird folgendermassen aufgebaut: Entwickler/Box (z.B. ubuntu/xenial64)
 
 ##### Box Befehle
 Box hinzufügen:
-
-vagrant add "box-name"
+`vagrant add "box-name"`
 
 Lokal vorhandene Boxen anzeigen:
-
-vagrant  box list
+`vagrant  box list`
 
 Vm erstellen
 
