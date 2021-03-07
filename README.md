@@ -135,9 +135,7 @@ Ganzes Script:\
 `end`
 
 #### Netzwerkplan
-![](M300-Services/20_Netzwerkplan.PNG)
-
-
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/images/20_Netzwerkplan.PNG)
 
 First Header | Second Header
 ------------ | -------------
