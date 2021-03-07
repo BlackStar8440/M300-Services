@@ -137,4 +137,7 @@ Ganzes Script:\
 #### Netzwerkplan
 ![](M300-Services/20_Netzwerkplan.PNG)
 
-First Header | Second Header------------ | -------------Content cell 1 | Content cell 2Content column 1 | Content column 2
+First Header | Second Header
+------------ | -------------
+Content cell 1 | Content cell 2
+Content column 1 | Content column 2
