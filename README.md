@@ -146,4 +146,8 @@ Zugriff via den Port 3000:
 Wenn man das index.html File gelöscht wird sieht man das auf dem Host auch:
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/images/Webserver_ohneIndex.PNG)
 
+Port Forwarding Port mit einer Shell anzeigen:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/images/WebPortVagrant.png)
+
+
 # 25 Infrastruktur-Sicherheit
