@@ -52,6 +52,19 @@ Info: Dannach ist die VM in VirtualBox eingerichtet. Mit VmWare hat es nicht gek
 Cd in das Verzeichnis der VM:
 `vagrant ssh`
 
+#### Vagrant Befehlesübersicht
+
+Befehl | Erklärung | Beispiel
+------------ | ------------- | -------------
+vagrant init | Content cell 2 | Content cell 2
+Content column 1 | Content column 2 | Content column 2
+Content column 1 | Content column 2 | Content column 2
+Content column 1 | Content column 2 | Content column 2
+Content column 1 | Content column 2 | Content column 2
+Content column 1 | Content column 2 | Content column 2
+Content column 1 | Content column 2 | Content column 2
+
+
 ## 20 Infrastruktur-Autorsierung 
 ### Markdown
 
