@@ -97,26 +97,6 @@ Box hinzufügen:\
 Lokal vorhandene Boxen anzeigen:\
 `vagrant  box list`
 
-Vm erstellen
-
-Neuer Ablage Ordner erstellen: mkdir xy in beliebten Verzeichnis
-
-cd neuer Ordner
-
-vagrant init "box-name"
-
-vagrant up
-
-Status anzeigen: vagrant status
-
-Vm Updaten:
-
-Nach einer Änderung im Vagrantfile kann ein Server wie folgt aktualisiert werden: vagrant provision
-
-VM löschen:
-
-Vagrant destroy -f
-
 ### Packer
 Packer: Tool, mit dem man Images bzw. Boxen für eine Vielzahl von Dynamic Infrastructure Platforms mit einer Konfdatei erstellen kann
 
