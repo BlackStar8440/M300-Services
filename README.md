@@ -1,6 +1,12 @@
 # M300-Services
 M300 Serverübergreifende Dienste
 
+### Vorwissen
+Vor diesem Modul wusst ich nichts über Vagrant, IaC, was für Funktionen GitHub alles bietet und vieles weitere.
+
+### Wissenzuwachs
+Alles, was unten dokumentiert war ist war neu für mich. Ich habe in diesem Modul bis jetzt sehr viel gelernt. Vorallem Vagrant und die Möglichkeiten, welche es mit sich bringt war sehr interessant. Das man VMs mit verschiedenen Dingen automatisc und vor allem so schnell ohnen grossen Aufwand aufsetzen kann ist schon toll, jedoch weiss ich nicht ob ich das für mich persönlich oft verwenden kann.
+
 ## 10 Toolumgebung aufsetzen
 ### GitHub Bash
 Konfigurieren:
