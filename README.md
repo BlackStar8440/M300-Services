@@ -118,6 +118,7 @@ Herunterladen und entpacken. Normalerweise müsste man den "Variabel-Pfad" ergä
 ### Vagrant Umgebung
 
 #### Umgebung 
+
 VM mit einem Vagrant Fiele ein Ubuntu Webserver aufsetzen. Folgenden Zeilen aus dem Script sind wichtig für den Webserver
 
 Portforwarding für den Host lauft über den Port 3000:\
@@ -144,7 +145,7 @@ Ganzes Script:\
 #### Netzwerkplan
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/images/20_Netzwerkplan.PNG)
 
-#### Funktionsweise/Testfälle\
+#### Funktionsweise/Testfälle
 
 Zugriff via den Port 3000:
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/images/WebserverPort.PNG)
