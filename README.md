@@ -159,7 +159,7 @@ Port Forwarding Port mit einer Shell anzeigen:
 Ich habe diesen ganzen Block in einem einzigen Vagrant File gemacht. Das beinhaltet Firewall Rules, Benutzer- und Rechtvergabe, SSH Zgriff via Putty und ein Reverse Proxy.
 
 Das Vagrant File sieht folgendermassen aus:
-
+````
 `Vagrant.configure(2) do |config|`\
   `config.vm.box = "ubuntu/xenial64"`\
   `config.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true`\
@@ -210,3 +210,4 @@ Das Vagrant File sieht folgendermassen aus:
 	`sudo reboot`\
 `SHELL`\
 `end`\
+```
