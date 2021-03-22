@@ -218,3 +218,46 @@ Um via Putty auf die VM zugreifen muss man localhost als IP angeben und den Port
 
  Danach kann man isch mit einem User in der Shell anmelden:
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/images/SSH_2.PNG)
+
+### Reverse-Proxy
+Der Reverse-Proxy kann man mit folgendem Befehl testen:
+
+`sudo service nginx configtest`\
+
+Wenn "Done" als Meldung kommt funktioniert der Reverse-Proxy:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/images/Reverse-Proxy.PNG)
+
+### Benutzer- und Rechtvergabe
+`chown` = Besitzer von einem Verzeichnis/Ordner wechseln
+
+Bsp. Vagrant File oben (-c gibt den User an): 
+`sudo chown -c vagrant /var/mail`
+
+`chmod` = Berechtigung auf ein Verzeichnis Ordner wechseln
+
+Bsp. Vagrant File oben (Parameter unten erklärt):
+`sudo chmod -R 700 /var/mail`
+
+#### chmod Parameter
+-R = Rekursiv --> Auf das Verzechis/Ordner und alles darunter
+
+Nach -R wird mit den Drei Zahlen die Rechte vergeben.
+
+Ziffer | Wer?
+------------ | -------------
+1 | Besitzer
+2 | Gruppe
+3 | Andere
+
+Ziffer bedeutung:
+
+Zahl | Rechte
+------------ | -------------
+0 | Keine
+1 | Nur Ausführen
+2 | Nur Schreiben
+3 | Schreiben und Ausführen
+4 | Nur Lesen
+5 | Lesen und Ausführen
+6 | Lesen und Schreiben
+7 | Voll
