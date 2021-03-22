@@ -249,7 +249,7 @@ Ziffer | Wer?
 2 | Gruppe
 3 | Andere
 
-Ziffer bedeutung:
+Ziffer Bedeutung:
 
 Zahl | Rechte
 ------------ | -------------
