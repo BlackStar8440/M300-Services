@@ -212,3 +212,9 @@ config.vm.provision "shell", inline: <<-SHELL
 SHELL
 end
 ```
+### SSH
+Um via Putty auf die VM zugreifen muss man localhost als IP angeben und den Port 2222, da SSH zu diesem "geforwardet" wird:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/images/SSH_1.PNG)
+
+ Danach kann man isch mit einem User in der Shell anmelden:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/images/SSH_2.PNG)
