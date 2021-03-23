@@ -261,3 +261,6 @@ Zahl | Rechte
 5 | Lesen und Ausführen
 6 | Lesen und Schreiben
 7 | Voll
+
+### Sicherheiten
+In den Script wurden Sicherheiten in Form Benutzer- und Rechtvergabe, Port Rules auf der FW und ein Zugriff via SSH eingerichtet.
