@@ -3,7 +3,7 @@
 ## 30-Docker
 #### Docker Befehle
 
-Befehl | Erklärung 
+Befehl | Erklärung |
 `docker run` | Befehl um neuen Container zu starten 
 `docker ps` |Gibt Überblick über die aktuellen Container an. Z.B. Name, IDs oder Status 
 `docker images` | Gibt Liste lokaler images aus. Dazu gibt es auch nocht Informationen aus
