@@ -17,3 +17,6 @@ Befehl | Erklärung
 `docker inspect` | Gibt umfangreichloche Informationen zu Container aus
 `docker diff` | Gibt Änderungen am Dateisystem des Containers im verleich zum Image, mit dem er gestartet wurde
 `docker top` | Gibt Informationen zu laufenden Prozessen in eimnem Container aus
+`docker build` | Baut ein Container anhanend eines Docker Files
+
+### Dockerfile
