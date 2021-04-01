@@ -20,3 +20,23 @@ Befehl | Erklärung
 `docker build` | Baut ein Container anhanend eines Docker Files
 
 ### Dockerfile
+#### Was ist ein Dockerfile?
+Ein Dockerfile ist eine Textdatei, in dem die "Befehle" definiert sind, anhanden von denen ein Container erstellt wird
+
+#### Anweisungen im Dockerfile
+Anweisung | Erklärung 
+------------ | ------------- | 
+`FROM` | Gibt an welches "Base" Image verwendet werden soll
+`ADD` | Kopiert die Datei, aus dem Build Context oder von URLs in das Image
+`CMD` | Führt die angegebenen Anweisungen aus, wenn der Container gestartet wurde
+`COPY` | Kopiert Dateien aus dem Build Context in das Image
+`ENTRYPOINT` | Legt eine ausführbare Datei fest, welche beim Start des Containers laufen soll
+`ENV` | Setzt Umgebungsvariablen im Image
+`HEASLTCHECK` | Docker prüft den Status der Anwendungen in einem Conatainer
+`MAINTAINER` | Setzt die "Autor-Metadaten" des Image auf den angegebenen Wert
+`RUN` | Führt die angegebenen Anweisungen im Container aus und bestätigt das Ergebnis
+`SHELL` | Erlaubt der Shell für folgenden RUN-BEfehk zu setzen.
+`USER` | Setzt User, welcher in folgeden RUN-, CMD- oder ENTRYPOINT-ANweisungen genutzt werden soll.
+`VOLUME` | Deklariert die angegebene Datei oder das Verzeichnis als Volumen
+`WORKDIR` | Setzt Arbeitsverzeichnis für alle folgende RUN-, CMD-, ENTRYPOINT-, ADD oder COPY-Anweisung
+
