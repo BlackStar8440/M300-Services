@@ -12,7 +12,7 @@ Befehl | Erklärung
 `docker start` | Startet gestoppte Container
 `docker stop` | Stopt Container
 `docker kill` | Stopt Ccontainer sofort
-`docker logs`| Gibt Logs fpr einen COntainer aus
+`docker logs`| Gibt Logs für einen COntainer aus
 `docker inspect` | Gibt umfangreichloche Informationen zu Container aus
 `docker diff` | Gibt Änderungen am Dateisystem des Containers im verleich zum Image, mit dem er gestartet wurde
 `docker top` | Gibt Informationen zu laufenden Prozessen in eimnem Container aus
@@ -39,3 +39,7 @@ Anweisung | Erklärung
 `VOLUME` | Deklariert die angegebene Datei oder das Verzeichnis als Volumen
 `WORKDIR` | Setzt Arbeitsverzeichnis für alle folgende RUN-, CMD-, ENTRYPOINT-, ADD oder COPY-Anweisung
 
+docker pull IMAGENAME --> holt image
+docker image --> zeigt heruntergeladene Images an
+docker run -it ubuntu --> startet vm
+docker container exec -it ContainerName /bin/bash --> geht in VM
