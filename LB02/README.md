@@ -8,7 +8,7 @@ Befehl | Erklärung
 `docker ps` |Gibt Überblick über die aktuellen Container an. Z.B. Name, IDs oder Status 
 `docker images` | Gibt Liste lokaler images aus. Dazu gibt es auch nocht Informationen aus
 `docker rm` | Entfernt einen oder mehrer Container
-`docker mi` | Löscht ein oder mehrere images
+`docker rmi` | Löscht ein oder mehrere images
 `docker start` | Startet gestoppte Container
 `docker stop` | Stopt Container
 `docker kill` | Stopt Ccontainer sofort
@@ -41,5 +41,6 @@ Anweisung | Erklärung
 
 docker pull IMAGENAME --> holt image
 docker image --> zeigt heruntergeladene Images an
-docker run -it ubuntu --> startet vm
+docker run -it Image Name --> startet vm
+docker run -d -t --name ContainerName ImageName --> Container mit bestimmten Namen starten
 docker container exec -it ContainerName /bin/bash --> geht in VM
