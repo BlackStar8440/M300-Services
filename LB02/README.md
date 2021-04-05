@@ -1,7 +1,7 @@
 # M300 LB02
 
 ## 30-Docker
-#### Docker Befehle
+### Docker Befehle
 Befehl | Erklärung 
 ------------ | ------------- | 
 `docker run` | Befehl um neuen Container zu starten 
@@ -41,6 +41,10 @@ Anweisung | Erklärung
 
 docker pull IMAGENAME --> holt image
 docker image --> zeigt heruntergeladene Images an
-docker run -it Image Name --> startet vm
 docker run -d -t --name ContainerName ImageName --> Container mit bestimmten Namen starten
 docker container exec -it ContainerName /bin/bash --> geht in VM
+
+## Aufgaben Docker
+### Bestehende Container als Backend, Desktop-App als Frontend  einsetzen
+
+docker run --rm -d -p 8080:80 -v /web:/var/www/html --name WebTest fd47849720dc
