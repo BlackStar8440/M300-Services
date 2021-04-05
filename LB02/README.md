@@ -44,7 +44,39 @@ docker image --> zeigt heruntergeladene Images an
 docker run -d -t --name ContainerName ImageName --> Container mit bestimmten Namen starten
 docker container exec -it ContainerName /bin/bash --> geht in VM
 
-## Aufgaben Docker
-### Bestehende Container als Backend, Desktop-App als Frontend  einsetzen
+## Apache Webserver Projekt
+### Übersicht
+In diesem Projekt geht es darum, dass ein Container auf Docker erstellt wird und man diesen zu einem Apache Webserver macht. Das Ziel ist, dass man vom Host (mein Laptop) auf den Webserver via den lokal installierten Browser zugreofen kann
 
-docker run --rm -d -p 8080:80 -v /web:/var/www/html --name WebTest fd47849720dc
+#### Apache Image erstellen
+Es wurde ein neues Dockerfile angelegt mit folgendem Inhalt (Den Inhalt habe ich von den Vorlagen, welche uns unser Modullehrer zur Verfügung gestellt hat):
+
+```
+FROM ubuntu:14.04
+MAINTAINER Marcel mc-b Bernet <marcel.bernet@ch-open.ch>
+
+RUN apt-get update
+RUN apt-get -q -y install apache2
+
+# Konfiguration Apache
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+
+RUN mkdir -p /var/lock/apache2 /var/run/apache2
+
+EXPOSE 80
+
+VOLUME /var/www/html
+
+CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
+```
+
+
+docker build ~/DockerFiles/Apache
+
+docker run --rm -d -p 8080:80 -v /web:/var/www/html --name WebTest 1c25767df4a6
+
+docker cp /home/ubuntu/DockerFiles/Apache/test.txt 1c25767df4a6:/var/www/html/
+
+docker cp /home/ubuntu/DockerFiles/index.html WebTest:/var/www/html/
