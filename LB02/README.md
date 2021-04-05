@@ -72,6 +72,33 @@ VOLUME /var/www/html
 CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
 ```
 
+Dannach habe ich das Image anhand des DOckerfiles erstellt:
+`docker build VerzeichnisInDemSichDasDockerfileBefindet` --> Bei der Erstellung sieht man direkt die ID des Images
+
+#### Container mit Image starten
+Mit folgendem Befehlt, wird ein COntainer mit dem erstellten Image erstellt. Ebenfalls beinhaltet es die Namenssetzung vom Container und das Portforwarding vom Port 80 zu 8080:
+`docker run --rm -d -p 8080:80 -v /web:/var/www/html --name ContainerNameSetzen ImageID`
+
+#### "Index File"
+Folgende Befehle mussen gemacht werden, damit das index.html FIle, welches ich gmeacht habe vom Host in den Container kopiert wird:
+`docker cp /SpeicherortDerDatei/index.html ContainereName:/var/www/html/`
+
+Das Index File sieht folgendermassen aus:
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>M300</title>
+</head>
+<body>
+<h1>LB02 GitHub Repository</h1>
+<a>Das GitHub Repository für die LB02 ist unter folgendem Link erreichbar:</a>
+<a href="https://github.com/BlackStar8440/M300-Services/tree/main/LB02">Klicken Sie hier</a>
+</body>
+</html>
+```
+
 
 docker build ~/DockerFiles/Apache
 
