@@ -82,7 +82,7 @@ Dannach habe ich das Image anhand des Dockerfiles erstellt:
 Mit folgendem Befehlt, wird ein COntainer mit dem erstellten Image erstellt. Ebenfalls beinhaltet es die Namenssetzung vom Container und das Portforwarding vom Port 80 zu 8080:
 `docker run --rm -d -p 8080:80 -v /web:/var/www/html --name ContainerNameSetzen ImageID`
 
-#### "Index File"
+#### index.html File
 Folgende Befehle mussen gemacht werden, damit das index.html File, welches ich gmeacht habe vom Host in den Container kopiert wird:
 `docker cp /SpeicherortDerDatei/index.html ContainereName:/var/www/html/`
 
