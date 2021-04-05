@@ -102,15 +102,6 @@ Das Index File sieht folgendermassen aus:
 </html>
 ```
 
-#### Testfälle
-
-
-
-
-docker build ~/DockerFiles/Apache
-
-docker run --rm -d -p 8080:80 -v /web:/var/www/html --name WebTest 1c25767df4a6
-
-docker cp /home/ubuntu/DockerFiles/Apache/test.txt 1c25767df4a6:/var/www/html/
-
-docker cp /home/ubuntu/DockerFiles/index.html WebTest:/var/www/html/
+#### Testfall
+Eigentlich gibt es hier leider nicht viel zu testen. Das einizige ist, dass man auf die index.html Datei, welche ich erstellt habe, von meinem Laptop via den lokalen Browser zugreifen kann:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/WebServerBrowserAnsicht.png)
