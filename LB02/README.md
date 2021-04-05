@@ -72,7 +72,7 @@ VOLUME /var/www/html
 CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
 ```
 
-Dannach habe ich das Image anhand des DOckerfiles erstellt:
+Dannach habe ich das Image anhand des Dockerfiles erstellt:
 `docker build VerzeichnisInDemSichDasDockerfileBefindet` --> Bei der Erstellung sieht man direkt die ID des Images
 
 #### Container mit Image starten
@@ -80,7 +80,7 @@ Mit folgendem Befehlt, wird ein COntainer mit dem erstellten Image erstellt. Ebe
 `docker run --rm -d -p 8080:80 -v /web:/var/www/html --name ContainerNameSetzen ImageID`
 
 #### "Index File"
-Folgende Befehle mussen gemacht werden, damit das index.html FIle, welches ich gmeacht habe vom Host in den Container kopiert wird:
+Folgende Befehle mussen gemacht werden, damit das index.html File, welches ich gmeacht habe vom Host in den Container kopiert wird:
 `docker cp /SpeicherortDerDatei/index.html ContainereName:/var/www/html/`
 
 Das Index File sieht folgendermassen aus:
@@ -98,6 +98,10 @@ Das Index File sieht folgendermassen aus:
 </body>
 </html>
 ```
+
+#### Testfälle
+
+
 
 
 docker build ~/DockerFiles/Apache
