@@ -48,6 +48,9 @@ docker container exec -it ContainerName /bin/bash --> geht in VM
 ### Übersicht
 In diesem Projekt geht es darum, dass ein Container auf Docker erstellt wird und man diesen zu einem Apache Webserver macht. Das Ziel ist, dass man vom Host (mein Laptop) auf den Webserver via den lokal installierten Browser zugreofen kann
 
+#### Netzwerkplan
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/DockerWebServer.PNG)
+
 #### Apache Image erstellen
 Es wurde ein neues Dockerfile angelegt mit folgendem Inhalt (Den Inhalt habe ich von den Vorlagen, welche uns unser Modullehrer zur Verfügung gestellt hat):
 
