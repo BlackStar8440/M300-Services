@@ -101,6 +101,7 @@ Das Index File sieht folgendermassen aus:
 </body>
 </html>
 ```
+In dem index.html File ist ein Link zu meinem GitHub Repository der LB02.
 
 #### Testfall
 Eigentlich gibt es hier leider nicht viel zu testen. Das einizige ist, dass man auf die index.html Datei, welche ich erstellt habe, von meinem Laptop via den lokalen Browser zugreifen kann:
