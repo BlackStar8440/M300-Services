@@ -108,3 +108,17 @@ Eigentlich gibt es hier leider nicht viel zu testen. Das einizige ist, dass man 
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/WebServerBrowserAnsicht.png)
 
 ## Container Sicherheit
+### Sicherheiten
+#### Nicht als root in den Container gehen
+Dazu muss man folgende Zeilen im Dockerfile machen:
+```
+RUN useradd -ms /bin/bash NeuerUserName
+
+USER NeuerUserName
+
+WORKDIR /homeNeuerUserName
+```
+Der unterste Befehl ist nicht nötigt. Dieser sagt nur aus in welchem Verzeichnis man sein sollte, wenn man sich mit dem Container verbindet (im Home Verzeihcnis hat der User Admin Berechtigung)
+
+Wenn man dann den Container mit dem Image, welche die oben gennanten Zeilen enthält startet ist man als ein User angemledet und man muss ein Passwort eingeben um Befehle mit sudo auszuführen(siehe Bild unten):
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/UserLogin.PNG)
