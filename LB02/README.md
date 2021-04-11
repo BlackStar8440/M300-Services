@@ -106,3 +106,5 @@ In dem index.html File ist ein Link zu meinem GitHub Repository der LB02.
 #### Testfall
 Eigentlich gibt es hier leider nicht viel zu testen. Das einizige ist, dass man auf die index.html Datei, welche ich erstellt habe, von meinem Laptop via den lokalen Browser zugreifen kann:
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/WebServerBrowserAnsicht.png)
+
+## Container Sicherheit
