@@ -122,3 +122,10 @@ Der unterste Befehl ist nicht nötigt. Dieser sagt nur aus in welchem Verzeichni
 
 Wenn man dann den Container mit dem Image, welche die oben gennanten Zeilen enthält startet ist man als ein User angemledet und man muss ein Passwort eingeben um Befehle mit sudo auszuführen(siehe Bild unten):
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/UserLogin.PNG)
+
+#### Read-Only
+Wenn man den Docker mit der Option read-only startet, können keine Änderungen am Dateisystem vorgenommen werden (auch mit sudo nicht):
+`docker run --read-only -d -t --name NameDesContainer Image`
+
+Wenn man z.B. eine Datei erstellen möchte kommt dann folgende Meldung:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/readonly.PNG)
