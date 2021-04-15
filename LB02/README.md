@@ -133,19 +133,6 @@ Wenn man z.B. eine Datei erstellen möchte kommt dann folgende Meldung:
 #### Dockerfile's
 Ein wichtiger Punkt bei dem man sich und seine Netzwerkumgebung schützen kann ist, dass man seine Dockerfile's selber schreibt. Wenn man das macht und nicht irgendwelche Images aus dem Internet herunterladet kann man sich sicher sein, dass diese nicht mit Malware oder sonst was verseucht sind.
 
-### Volumes
-#### Datencontainer
-Container mit Datencontainer namens dbdata erstellen:
-`docker create -v /dbdata --name dbstore busybox `
-
-Es wurde nun ein Verzeichnis namens dbdata im Host angelegt:
-![alt text]()
-Als Test für später wurde eine Datei namens test.txt dort drin erstellt.
-
-#### Zugriffs-Cotainer
-Nun wurde ein anderer Container erstellt, welcher auf ds erstelt Verzeichnis zugreifen soll. Das erfolgt mit folgendem Befehl:
-`docker run -it --volumes-from dbstore --name NameDesContainers busybox`
-
 ### Monitoring
 #### Cadvisor
 Cadvisor ist eine Überwachungs Tool von Google. Mit folgendem Befehl habe ich einen Container erstellt, welcher Cadvisor enthält:\
