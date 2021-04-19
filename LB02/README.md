@@ -140,3 +140,24 @@ Cadvisor ist eine Überwachungs Tool von Google. Mit folgendem Befehl habe ich e
 
 Nach dem Aufsetzen des Containers konnte ich via den Port 8082 auf Cadvisor zugreifen:
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/Cadvisor.png)
+
+## Docker Hub
+### Image bereitstellen
+Zuerst muss ein Container mit einem Image erstellt werden. Danach führt man folgenden Befehl aus:
+`docker commit ContainerIDMitDemGewünschtenImage DockerhubUserName/GewünschterName:Tag`
+
+Danach pusht man das ganze auf Docker Hub:
+`docker push DockerHubUserName/GewünschterName:Tag`
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/ImageAufHubPushen.PNG)
+
+Ansicht in DockerHub:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/DockerHub.png)
+
+Achtung: Das funktioniert nur, wenn man an der console mit einem Docker Account angemeldet ist (`docker login`).
+
+### Image pullen
+Das Image kann nun mit pull heruntergelade werden. Dazu muss man folgenden Befehl eingeben:
+`docker pull DockerHubUserName/GewünschterName:Tag`
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/ImagePullen.PNG)
+
+## Kubernetes
