@@ -161,3 +161,81 @@ Das Image kann nun mit pull heruntergelade werden. Dazu muss man folgenden Befeh
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/ImagePullen.PNG)
 
 ## Kubernetes
+### Deplyoment erstellen
+Es furde ein deployment.yaml File erstellt, welches folgenden Code beinhaltet:
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: m300deployment
+  labels:
+    app: m300
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: m300
+  template:
+    metadata:
+      labels:
+        app: m300
+    spec:
+      containers:
+      - name: m300-web
+        image: hallo987123hallo/test-cloud-image:test
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+```
+Dannach muss man das File "applyen", damit die "Container" welche im .yaml File definiert sind.
+File Applyn:
+`kubectl apply -f Name.yaml`
+
+Mit `kubectl get pods` Kann man die Pods anzeigen lassen:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/kub/ApplyYml.PNG)
+
+### Service 
+Ein File .yaml erstellt, das ein Loadbalancer (Service) macht:
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: m300service
+  annotations:
+    service.beta.kubernetes.io/linode-loadbalancer-throttle: "4"
+  labels:
+    app: m300service
+spec:
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: m300
+  sessionAffinity: None
+```
+Wie man in dem Deployment und dem Serice File sieht steht bei app überall das gleiche. Der Loadbalancer verwendet alle "Contauner", welche bei app das gleiche Keyword haben.
+
+Service ausführen:
+`kubectl apply -f Name.yaml`
+
+Service anzeigen:
+`kubectl get services`
+
+Der rote umrandete Service ist der, welcher ich erstellt ahbe, die anderen sind nicht von mir:
+![alt text]([)](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/kub/ApplyService.PNG)
+
+Im Bild oben sihet man, dass es eine PortForwarding vom Port 80 auf 31722 gibt, welcher funktioniert:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/kub/KubWeb.PNG)
+
+#### Beweis, dass LoadBalancer funktioniert
+Mit folgendem Befehl sieht man einige Informationen über einen Service:
+`kubectl describe services ServiceName`
+
+Unter dem Punkt Endpoint werden alle IPs angegeben, vo den Container welche im LoadBalancer enthalten sind. Im Deployment waren drei Replicas definiert, welche man hier sieht:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/kub/LoadBalancing.PNG)
+
+Wenn man die Replicas im Deployment auf 5 erhöht sieht man dass, was bedeutet der LoadBalancer funktioniert:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/kub/LoadBalancing5More.PNG)
