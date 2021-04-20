@@ -187,7 +187,7 @@ spec:
         ports:
         - containerPort: 80
 ```
-Dannach muss man das File "applyen", damit die "Container" welche im .yaml File definiert sind.
+Dannach muss man das File "applyen", damit die "Container" welche im .yaml File definiert sind erstellt werden.
 File Applyn:
 `kubectl apply -f Name.yaml`
 
