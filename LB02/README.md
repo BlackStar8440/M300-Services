@@ -39,14 +39,9 @@ Anweisung | Erklärung
 `VOLUME` | Deklariert die angegebene Datei oder das Verzeichnis als Volumen
 `WORKDIR` | Setzt Arbeitsverzeichnis für alle folgende RUN-, CMD-, ENTRYPOINT-, ADD oder COPY-Anweisung
 
-docker pull IMAGENAME --> holt image
-docker image --> zeigt heruntergeladene Images an
-docker run -d -t --name ContainerName ImageName --> Container mit bestimmten Namen starten
-docker container exec -it ContainerName /bin/bash --> geht in VM
-
 ## Apache Webserver Projekt
 ### Übersicht
-In diesem Projekt geht es darum, dass ein Container auf Docker erstellt wird und man diesen zu einem Apache Webserver macht. Das Ziel ist, dass man vom Host (mein Laptop) auf den Webserver via den lokal installierten Browser zugreofen kann
+In diesem Projekt geht es darum, dass ein Container auf Docker erstellt wird und man diesen zu einem Apache Webserver macht. Das Ziel ist, dass man vom Host (mein Laptop) auf den Webserver via den lokal installierten Browser zugreifen kann.
 
 #### Netzwerkplan
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/DockerWebServer.PNG)
@@ -79,7 +74,7 @@ Dannach habe ich das Image anhand des Dockerfiles erstellt:
 `docker build VerzeichnisInDemSichDasDockerfileBefindet` --> Bei der Erstellung sieht man direkt die ID des Images
 
 #### Container mit Image starten
-Mit folgendem Befehlt, wird ein COntainer mit dem erstellten Image erstellt. Ebenfalls beinhaltet es die Namenssetzung vom Container und das Portforwarding vom Port 80 zu 8080:
+Mit folgendem Befehlt, wird ein Container mit dem erstellten Image erstellt. Ebenfalls beinhaltet es die Namenssetzung vom Container und das Portforwarding vom Port 80 zu 8080:
 `docker run --rm -d -p 8080:80 -v /web:/var/www/html --name ContainerNameSetzen ImageID`
 
 #### index.html File
@@ -224,17 +219,17 @@ Service ausführen:
 Service anzeigen:
 `kubectl get services`
 
-Der rote umrandete Service ist der, welcher ich erstellt ahbe, die anderen sind nicht von mir:
-![alt text]([)](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/kub/ApplyService.PNG)
+Der rote umrandete Service ist der, welcher ich erstellt habe, die anderen sind nicht von mir:
+![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/kub/ApplyService.PNG)
 
-Im Bild oben sihet man, dass es eine PortForwarding vom Port 80 auf 31722 gibt, welcher funktioniert:
+Im Bild oben sieht man, dass es eine PortForwarding vom Port 80 auf 31722 gibt, welcher funktioniert:
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/kub/KubWeb.PNG)
 
 #### Beweis, dass LoadBalancer funktioniert
 Mit folgendem Befehl sieht man einige Informationen über einen Service:
 `kubectl describe services ServiceName`
 
-Unter dem Punkt Endpoint werden alle IPs angegeben, vo den Container welche im LoadBalancer enthalten sind. Im Deployment waren drei Replicas definiert, welche man hier sieht:
+Unter dem Punkt Endpoint werden alle IPs angegeben, von den Container welche im LoadBalancer enthalten sind. Im Deployment waren drei Replicas definiert, welche man hier sieht:
 ![alt text](https://github.com/BlackStar8440/M300-Services/blob/main/LB02/images/kub/LoadBalancing.PNG)
 
 Wenn man die Replicas im Deployment auf 5 erhöht sieht man dass, was bedeutet der LoadBalancer funktioniert:
