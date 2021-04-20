@@ -162,7 +162,7 @@ Das Image kann nun mit pull heruntergelade werden. Dazu muss man folgenden Befeh
 
 ## Kubernetes
 ### Deplyoment erstellen
-Es furde ein deployment.yaml File erstellt, welches folgenden Code beinhaltet:
+Es wurde ein deployment.yaml File erstellt, welches folgenden Code beinhaltet:
 ```
 apiVersion: apps/v1
 kind: Deployment
